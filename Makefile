@@ -7,6 +7,9 @@ docker-down:
 docker-build: memory
 	cd laradock && docker-compose up --build -d
 
+workspace:
+	cd laradock && docker-compose exec workspace bash
+
 test:
 	cd laradock && docker-compose exec workspace vendor/bin/phpunit
 
